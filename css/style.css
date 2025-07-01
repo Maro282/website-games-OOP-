@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Comfortaa, cursive;
+}
+
+.body {
+  background-color: rgb(39, 43, 48);
+}
+
+/* ----------------Handling Spinner---------------- */
+
+.spinner {
+  position: absolute;
+  background-color: #272b30;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.spinner::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid white;
+  border-bottom-color: transparent;
+  animation: spinner 0.5s linear;
+  animation-iteration-count: infinite;
+
+  z-index: 1;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ----------------Handling navbar-------------- */
+
+nav {
+  width: 75%;
+  background-color: rgb(58, 73, 123);
+  transition: all 0.5s ease-in;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.25);
+  z-index: 999;
+  border-radius: 0 !important;
+  transform: rotate(360deg);
+}
+
+.header-image {
+  height: 30vh;
+}
+
+.site-logo {
+  width: 50%;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+.navbar-toggler span {
+  color: white;
+}
+
+nav .site-logo h5 {
+  font-family: "Nerko One", cursive;
+  font-weight: 500;
+  font-size: 26px;
+  color: white;
+}
+
+.site-logo h1:hover,
+.site-logo h1:focus {
+  color: white;
+}
+
+nav .site-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.collapse .navbar-nav li a {
+  font-family: Comfortaa, cursive;
+  color: white;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 500;
+  transition: all 0.2s ease-in;
+}
+
+.collapse .navbar-nav li a:hover {
+  color: rgb(0, 153, 204);
+}
+
+.collapse .navbar-nav li .active {
+  color: rgb(0, 153, 204);
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    width: 95%;
+  }
+
+  .site-logo {
+    width: 75%;
+  }
+
+  .collapse .navbar-nav {
+    padding: 20px;
+  }
+  .collapse .navbar-nav li {
+    text-align: center;
+    border-bottom: 1px solid gray;
+    transition: all 0.3s;
+  }
+  .collapse .navbar-nav li:hover {
+    transform: translateX(20px);
+  }
+}
+
+/* -------------------- handling main section --------------------- */
+
+.card {
+  background-color: rgb(39, 43, 48);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.card img {
+  filter: brightness(70%);
+  transition: all 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.card:hover img {
+  filter: brightness(100%);
+}
+
+.card-body .title-and-free h5 {
+  font-size: 14px;
+  color: white;
+}
+
+.card-body .title-and-free .free {
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  background-color: blueviolet;
+  border-color: blueviolet;
+}
+
+.card-body .card-text {
+  color: gray;
+  font-size: 12px;
+  line-height: 21px;
+  height: 80px;
+}
+
+.card-footer .category-pc {
+  font-size: 11px;
+  color: white;
+  font-weight: 700;
+  line-height: 11px;
+}
+
+.category-pc p {
+  background-color: rgb(50, 56, 62);
+  padding: 5px 6px;
+}
+
+/* ----------------------Handling details show------------------------- */
+
+.details-show {
+  height: 100vh;
+  font-family: Comfortaa, cursive;
+  color: white;
+}
+
+.details-show .header h1 {
+  font-family: "Nerko One", cursive;
+}
+
+.details-show .header i:hover {
+  cursor: pointer;
+  color: rgb(220, 53, 69);
+}
+
+.details-show .right-side .fully-description {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.btn-outline-danger {
+  color: white !important;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.details-show .right-side span {
+  font-size: 12px;
+}
